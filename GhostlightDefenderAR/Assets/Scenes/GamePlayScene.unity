@@ -1303,7 +1303,7 @@ MonoBehaviour:
   startButton: {fileID: 1848433871}
   pauseButton: {fileID: 73345303}
   resumeButton: {fileID: 619165258}
-  retryButton: {fileID: 0}
+  retryButton: {fileID: 1128278622}
   scanText: {fileID: 1710120584}
   heart: {fileID: 1692443700}
   timeCount: {fileID: 934535312}
@@ -1341,6 +1341,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25beccdf6d040a4fb36e4a127244b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planeManager: {fileID: 837222948}
+  arSession: {fileID: 602159110}
+  uiManager: {fileID: 700515497}
+  enemyPrefab: {fileID: 4578607553790689498, guid: efe499e9a52c77247b7d3187d83876ae, type: 3}
+  enemyCount: 1
+  spawnRate: 2
 --- !u!1 &757535100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848627549}
   m_Layer: 0
-  m_Name: WinAndLoseScene
+  m_Name: WinAndLoseUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
