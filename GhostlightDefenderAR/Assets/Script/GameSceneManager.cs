@@ -33,6 +33,7 @@ public class GameSceneManager : MonoBehaviour
     }
     public void ExitGame()
     {
+        Time.timeScale = 1f;
         Application.Quit();
         Debug.Log("Quit Game");
     }
