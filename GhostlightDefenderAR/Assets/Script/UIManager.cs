@@ -8,6 +8,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button startButton;
     [SerializeField] private Button pauseButton;
     [SerializeField] private Button resumeButton;
+    [SerializeField] private Button retryButton;
 
     [Header("UI Setup")]
     [SerializeField] private GameObject scanText;
@@ -15,6 +16,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private GameObject timeCount;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject flashlight;
+    [SerializeField] private GameObject winAndLoseUI;
 
     [Header("Pausegame Setup")]
     [SerializeField]private bool isPause = false;
@@ -22,17 +24,20 @@ public class UiManager : MonoBehaviour
     public static event Action OnStartButtonPressed;
     public static event Action OnPauseButtonPressed;
     public static event Action OnResumeButtonPressed;
+    public static event Action OnRetryButtonPressed;
 
     private void Start()
     {
         startButton.onClick.AddListener(OnUIStartButtonPressed);
         pauseButton.onClick.AddListener(OnUIPauseButtonPressed);
         resumeButton.onClick.AddListener(OnUIResumeButtonPressed);
+        retryButton.onClick.AddListener(OnUIRetryButtonPressed);
 
         heart.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(false);
         timeCount.gameObject.SetActive(false);
         flashlight.gameObject.SetActive(false);
+        winAndLoseUI.gameObject.SetActive(false);
     }
     private void OnUIStartButtonPressed()
     {
@@ -55,6 +60,16 @@ public class UiManager : MonoBehaviour
         OnResumeButtonPressed?.Invoke();
         pauseMenu.gameObject.SetActive(false);
         ResumeGame();
+    }
+
+    private void OnUIRetryButtonPressed()
+    {
+        OnRetryButtonPressed?.Invoke();
+        heart.gameObject.SetActive(false);
+        pauseMenu.gameObject.SetActive(false);
+        timeCount.gameObject.SetActive(false);
+        flashlight.gameObject.SetActive(false);
+        winAndLoseUI.gameObject.SetActive(false);
     }
      public void PauseGame()
     {
