@@ -13,7 +13,7 @@ public class UiManager : MonoBehaviour
     [Header("UI Setup")]
     [SerializeField] private GameObject scanText;
     [SerializeField] private GameObject heart;
-    [SerializeField] private GameObject timeCount;
+    [SerializeField] private GameObject timeCountUi;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject flashlight;
     [SerializeField] private GameObject winLoseUi;
@@ -22,12 +22,12 @@ public class UiManager : MonoBehaviour
 
     [Header("Pausegame Setup")]
     [SerializeField]private bool isPause = false;
+    [SerializeField] private TimeCountDown timeCount;
     
     public static event Action OnStartButtonPressed;
     public static event Action OnPauseButtonPressed;
     public static event Action OnResumeButtonPressed;
     public static event Action OnRetryButtonPressed;
-
     private void Start()
     {
         startButton.onClick.AddListener(OnUIStartButtonPressed);
@@ -37,7 +37,7 @@ public class UiManager : MonoBehaviour
 
         heart.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(false);
-        timeCount.gameObject.SetActive(false);
+        timeCountUi.gameObject.SetActive(false);
         flashlight.gameObject.SetActive(false);
         winLoseUi.gameObject.SetActive(false);
     }
@@ -47,19 +47,21 @@ public class UiManager : MonoBehaviour
         scanText.gameObject.SetActive(false);
         startButton.gameObject.SetActive(false);
         heart.gameObject.SetActive(true);
-        timeCount.gameObject.SetActive(true);
+        timeCountUi.gameObject.SetActive(true);
         flashlight.gameObject.SetActive(true);
-
+        timeCount.StartCountdown();
     }
     private void OnUIPauseButtonPressed()
     {
         OnPauseButtonPressed?.Invoke();
+        timeCount.StopTimer();
         pauseMenu.gameObject.SetActive(true);
         PauseGame();
     }
     private void OnUIResumeButtonPressed()
     {
         OnResumeButtonPressed?.Invoke();
+        timeCount.StartCountdown();
         pauseMenu.gameObject.SetActive(false);
         ResumeGame();
     }
@@ -69,11 +71,12 @@ public class UiManager : MonoBehaviour
         OnRetryButtonPressed?.Invoke();
         heart.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(false);
-        timeCount.gameObject.SetActive(false);
+        timeCountUi.gameObject.SetActive(false);
         flashlight.gameObject.SetActive(false);
         winLoseUi.gameObject.SetActive(false);
         startButton.gameObject.SetActive(true);
         scanText.gameObject.SetActive(true);
+        timeCount.ResetTimer();
         ResumeGame();
     }
     
