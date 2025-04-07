@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LittleGhost_LP (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8406845055882037675, guid: 36621476210b2c649b8aeea96b7c2587, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
