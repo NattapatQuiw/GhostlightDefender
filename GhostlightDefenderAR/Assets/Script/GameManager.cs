@@ -11,12 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ARPlaneManager planeManager;
     [SerializeField] private ARSession arSession;
     [SerializeField] private UiManager uiManager;
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private HealthManager healthManager;
 
     [Header("Enemy Settings")]
-    [SerializeField] private int enemyCount = 1;
-    [SerializeField] private float spawnRate = 3f;
+    [SerializeField] private int enemyCount = 5;
+    [SerializeField] private float spawnRate = 2.5f;
 
     private bool _gameStarted = false;
     private List<GameObject> _spawnedEnemies = new List<GameObject>();
@@ -80,7 +80,8 @@ public class GameManager : MonoBehaviour
 
         var randomPlane = planesList[Random.Range(0, planesList.Count)];
         var randomPosition = GetRandomPosition(randomPlane);
-        var enemy = Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
+        var selectedPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+        var enemy = Instantiate(selectedPrefab, randomPosition, Quaternion.identity);
         _spawnedEnemies.Add(enemy);
     }
 
@@ -89,7 +90,7 @@ public class GameManager : MonoBehaviour
         var center = plane.center;
         var size = plane.size * 0.5f;
         var randomX = Random.Range(-size.x, size.x);
-        var randomY = Random.Range(size.y, size.y);
+        var randomY = Random.Range(0f, 3f);
         return new Vector3(center.x + randomX, center.y + randomY, center.z + randomY);
     }
 

@@ -1442,10 +1442,17 @@ MonoBehaviour:
   planeManager: {fileID: 837222948}
   arSession: {fileID: 602159110}
   uiManager: {fileID: 700515497}
-  enemyPrefab: {fileID: 4578607553790689498, guid: efe499e9a52c77247b7d3187d83876ae, type: 3}
+  enemyPrefabs:
+  - {fileID: 5850171076146031631, guid: c2c5652d32a95a94c87803574039fc5d, type: 3}
+  - {fileID: 93060227386748819, guid: fb9cc5ee99f720e4d841276e8b02d9c0, type: 3}
+  - {fileID: 8641814954606868984, guid: 1d5cbd7fe0d430e408866de103b1a601, type: 3}
+  - {fileID: 2676163176030157459, guid: a391c2415f0c65845ab8e5de917bd6d7, type: 3}
+  - {fileID: 6514255231624173443, guid: 45b9952a5a682fb48b7ba3cbd045420f, type: 3}
+  - {fileID: 8015920579531647125, guid: 7337356e0bab7dd43b16d585be146279, type: 3}
+  - {fileID: 7363159485660979180, guid: cdfa708d7d39d894087fa4e0ac4915ff, type: 3}
   healthManager: {fileID: 1804543936}
-  enemyCount: 1
-  spawnRate: 2
+  enemyCount: 5
+  spawnRate: 2.5
 --- !u!1 &757535100
 GameObject:
   m_ObjectHideFlags: 0
@@ -3710,7 +3717,7 @@ GameObject:
   - component: {fileID: 1804543936}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
