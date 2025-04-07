@@ -70,6 +70,7 @@ public class UiManager : MonoBehaviour
         timeCount.gameObject.SetActive(false);
         flashlight.gameObject.SetActive(false);
         winAndLoseUI.gameObject.SetActive(false);
+        startButton.gameObject.SetActive(true);
     }
      public void PauseGame()
     {

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ARSession arSession;
     [SerializeField] private UiManager uiManager;
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private HealthManager healthManager;
 
     [Header("Enemy Settings")]
     [SerializeField] private int enemyCount = 1;
@@ -30,7 +31,6 @@ public class GameManager : MonoBehaviour
     {
         if (_gameStarted) return;
         _gameStarted = true;
-        print("Game started!!!");
 
         planeManager.enabled = false;
         foreach (var plane in planeManager.trackables)
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     void RestartGame()
     {
         _gameStarted = false;
+        healthManager.resetHealth();
         StartCoroutine(RestartGameCoroutine());
     }
 
