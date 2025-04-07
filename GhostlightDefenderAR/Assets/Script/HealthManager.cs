@@ -15,14 +15,6 @@ public class HealthManager : MonoBehaviour
         UpdateHealthText();
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            takeDamage();
-        }
-    }
-
     public void takeDamage()
     {
         currentHealth--;
@@ -42,4 +34,5 @@ public class HealthManager : MonoBehaviour
         currentHealth = maxHealth;
         UpdateHealthText();
     }
+
 }
