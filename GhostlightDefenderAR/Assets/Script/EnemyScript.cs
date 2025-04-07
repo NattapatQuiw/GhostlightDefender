@@ -16,10 +16,6 @@ public class EnemyScript : MonoBehaviour
             player = playerObj.transform;
             healthManager = playerObj.GetComponent<HealthManager>();
         }
-        else
-        {
-            Debug.LogWarning("Player not found! Make sure your player has the tag 'Player'");
-        }
     }
 
     void Update()

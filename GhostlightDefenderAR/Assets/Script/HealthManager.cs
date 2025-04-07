@@ -7,11 +7,13 @@ public class HealthManager : MonoBehaviour
 {
     public int maxHealth = 5;
     public int currentHealth;
+    private UiManager uiManager;
     [SerializeField] private TMP_Text healthText; 
     
     void Start()
     {
         currentHealth = maxHealth;
+        uiManager = FindObjectOfType<UiManager>();
         UpdateHealthText();
     }
 
@@ -22,6 +24,11 @@ public class HealthManager : MonoBehaviour
         currentHealth = 0;
 
         UpdateHealthText();
+
+        if(currentHealth == 0)
+        {
+            uiManager.onGameLoseShown();
+        }
     }
 
     private void UpdateHealthText()
@@ -34,5 +41,4 @@ public class HealthManager : MonoBehaviour
         currentHealth = maxHealth;
         UpdateHealthText();
     }
-
 }

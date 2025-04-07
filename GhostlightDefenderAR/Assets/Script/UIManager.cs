@@ -16,7 +16,9 @@ public class UiManager : MonoBehaviour
     [SerializeField] private GameObject timeCount;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject flashlight;
-    [SerializeField] private GameObject winAndLoseUI;
+    [SerializeField] private GameObject winLoseUi;
+    [SerializeField] private GameObject winUiShown;
+    [SerializeField] private GameObject loseUiShown;
 
     [Header("Pausegame Setup")]
     [SerializeField]private bool isPause = false;
@@ -37,7 +39,7 @@ public class UiManager : MonoBehaviour
         pauseMenu.gameObject.SetActive(false);
         timeCount.gameObject.SetActive(false);
         flashlight.gameObject.SetActive(false);
-        winAndLoseUI.gameObject.SetActive(false);
+        winLoseUi.gameObject.SetActive(false);
     }
     private void OnUIStartButtonPressed()
     {
@@ -69,10 +71,29 @@ public class UiManager : MonoBehaviour
         pauseMenu.gameObject.SetActive(false);
         timeCount.gameObject.SetActive(false);
         flashlight.gameObject.SetActive(false);
-        winAndLoseUI.gameObject.SetActive(false);
+        winLoseUi.gameObject.SetActive(false);
         startButton.gameObject.SetActive(true);
+        scanText.gameObject.SetActive(true);
+        ResumeGame();
     }
-     public void PauseGame()
+    
+    public void onGameWinShown()
+    {
+        winLoseUi.gameObject.SetActive(true);
+        winUiShown.gameObject.SetActive(true);
+        loseUiShown.gameObject.SetActive(false);
+        PauseGame();
+    }
+
+    public void onGameLoseShown()
+    {
+        winLoseUi.gameObject.SetActive(true);
+        loseUiShown.gameObject.SetActive(true);
+        winUiShown.gameObject.SetActive(false);
+        PauseGame();
+    } 
+
+    private void PauseGame()
     {
         Time.timeScale = 0f;
         isPause = true;
