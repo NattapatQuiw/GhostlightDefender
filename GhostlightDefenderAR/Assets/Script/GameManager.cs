@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private HealthManager healthManager;
 
     [Header("Enemy Settings")]
-    [SerializeField] private int enemyCount = 5;
     [SerializeField] private float spawnRate = 2.5f;
 
     private bool _gameStarted = false;
@@ -98,10 +97,7 @@ public class GameManager : MonoBehaviour
     {
         while (_gameStarted)
         {
-            if (_spawnedEnemies.Count < enemyCount)
-            {
-                SpawnEnemy();
-            }
+            SpawnEnemy();
             yield return new WaitForSeconds(spawnRate);
         }
     }
