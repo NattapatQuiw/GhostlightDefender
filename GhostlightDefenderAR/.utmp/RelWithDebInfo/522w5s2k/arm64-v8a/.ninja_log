@@ -1,0 +1,10 @@
+# ninja log v5
+12	1108	7658285181648222	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	799f470ddac6024b
+6	1168	7658285182191228	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	1922ef9e89912e47
+15	1189	7658285182459076	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	d7a36d1944ef80f1
+22	1197	7658285182519365	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	d021ebad172af426
+19	1250	7658285183068240	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a83c91257d11c6c0
+0	1343	7658285183961656	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	949210261e60418
+9	1534	7658285185879675	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	a6fd91ced24fc6a8
+4	1746	7658285187983317	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1a39d7cf1e8e0cbd
+1747	1975	7658285190329655	E:/UnityGame/GhostlightDefender/GhostlightDefenderAR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/522w5s2k/obj/arm64-v8a/libgame.so	2f7b2568a19d7a69

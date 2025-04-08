@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "E:\\UnityGame\\GhostlightDefender\\GhostlightDefenderAR\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\CMakeLists.txt",
+    "E:\\UnityGame\\GhostlightDefender\\GhostlightDefenderAR\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\src\\main\\cpp\\GameActivity\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "D:\\Uinty\\6000.0.37f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "E:\\UnityGame\\GhostlightDefender\\GhostlightDefenderAR\\.utmp\\RelWithDebInfo\\522w5s2k\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "D:\\Uinty\\6000.0.37f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "E:\\UnityGame\\GhostlightDefender\\GhostlightDefenderAR\\.utmp\\RelWithDebInfo\\522w5s2k\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "game::@d02bb112ea9f9c2ed29f": {
+      "artifactName": "game",
+      "abi": "arm64-v8a",
+      "output": "E:\\UnityGame\\GhostlightDefender\\GhostlightDefenderAR\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\522w5s2k\\obj\\arm64-v8a\\libgame.so",
+      "runtimeFiles": []
+    }
+  }
+}
