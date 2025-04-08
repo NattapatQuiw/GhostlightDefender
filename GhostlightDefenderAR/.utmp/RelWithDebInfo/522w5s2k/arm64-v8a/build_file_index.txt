@@ -1,0 +1,2 @@
+E:\UnityGame\GhostlightDefender\GhostlightDefenderAR\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+E:\UnityGame\GhostlightDefender\GhostlightDefenderAR\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

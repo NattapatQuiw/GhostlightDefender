@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         var center = plane.center;
         var size = plane.size * 0.5f;
         var randomX = Random.Range(-size.x, size.x);
-        var randomY = Random.Range(0f, 3f);
+        var randomY = Random.Range(0f, 1f);
         return new Vector3(center.x + randomX, center.y + randomY, center.z + randomY);
     }
 
