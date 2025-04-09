@@ -50,12 +50,14 @@ public class UiManager : MonoBehaviour
         timeCountUi.gameObject.SetActive(true);
         flashlight.gameObject.SetActive(true);
         timeCount.StartCountdown();
+        SoundManager.Instance.PlayClickSound();
     }
     private void OnUIPauseButtonPressed()
     {
         OnPauseButtonPressed?.Invoke();
         timeCount.StopTimer();
         pauseMenu.gameObject.SetActive(true);
+        SoundManager.Instance.PlayClickSound();
         PauseGame();
     }
     private void OnUIResumeButtonPressed()
@@ -63,6 +65,7 @@ public class UiManager : MonoBehaviour
         OnResumeButtonPressed?.Invoke();
         timeCount.StartCountdown();
         pauseMenu.gameObject.SetActive(false);
+        SoundManager.Instance.PlayClickSound();
         ResumeGame();
     }
 
@@ -77,6 +80,7 @@ public class UiManager : MonoBehaviour
         startButton.gameObject.SetActive(true);
         scanText.gameObject.SetActive(true);
         timeCount.ResetTimer();
+        SoundManager.Instance.PlayClickSound();
         ResumeGame();
     }
     
@@ -85,6 +89,7 @@ public class UiManager : MonoBehaviour
         winLoseUi.gameObject.SetActive(true);
         winUiShown.gameObject.SetActive(true);
         loseUiShown.gameObject.SetActive(false);
+        SoundManager.Instance.PlayWinSound();
         PauseGame();
     }
 
@@ -93,6 +98,7 @@ public class UiManager : MonoBehaviour
         winLoseUi.gameObject.SetActive(true);
         loseUiShown.gameObject.SetActive(true);
         winUiShown.gameObject.SetActive(false);
+        SoundManager.Instance.PlayLoseSound();
         PauseGame();
     } 
 
