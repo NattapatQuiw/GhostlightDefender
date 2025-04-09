@@ -6,7 +6,7 @@ public class TimeCountDown : MonoBehaviour
 {
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private UiManager uiManager;
-    [SerializeField] private float timeInSeconds = 300f;
+    [SerializeField] private float timeInSeconds = 180f;
 
     private bool isRunning = false;
     private float remainingTime;
